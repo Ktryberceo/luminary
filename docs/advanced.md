@@ -131,6 +131,18 @@ Gmail requires an "App Password" for SMTP access:
 -e SMTP_PASSWORD=your-sendgrid-api-key
 ```
 
+### Groundmail
+
+```bash
+-e SMTP_HOSTNAME=smtp.groundmail.dev \
+-e SMTP_HOST_PORT=587 \
+-e SMTP_USE_TLS=TRUE \
+-e SMTP_USERNAME=groundmail \
+-e SMTP_PASSWORD=your-groundmail-smtp-credential
+```
+
+Until you verify a sending domain and add a payment method, Groundmail only sends from `noreply@mail.groundmail.dev` to your own account email; other recipients are rejected. See [Groundmail SMTP](https://docs.groundmail.dev/smtp) (use port `2525` if 587 is blocked).
+
 ### Local Mail Server (No Authentication)
 
 ```bash
